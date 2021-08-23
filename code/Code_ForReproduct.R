@@ -97,12 +97,6 @@ for(i in 1:100){
 }
 
 
-# 带进算法
-# 睡觉1:5 done save2
-# 睡觉6:10 done save2
-# 睡觉11:15 done save2
-# for(j in 1:100){
-
 
 for(j in 1:100){
   Data = data.frame(table_list[j])
