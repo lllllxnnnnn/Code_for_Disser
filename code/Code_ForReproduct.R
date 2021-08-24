@@ -1211,12 +1211,12 @@ result_innormal <- data.frame(row.names = c("MAPE" ,
                                             "ECDFB.PointCR" ,
                                             "ECDFB.AvL"))
 
-#打开原始数据
+#data loading
 Data_All <- readRDS(file="../data/Data_All.RData")
-# 固定
+
 dfSET <- readRDS(file="../data/Data_Use.RData") 
 df000 <- data.frame(dfSET,Data_All)
-# 循环
+
 table_list <- list()
 for(i in 1:100){
   df0 <- df000 #
@@ -1421,8 +1421,8 @@ for(j in 1:100){
 }
 
 
-saveRDS(result_groupbymonth, "result_groupbymonth_1-30&71-100.RData") # 存数据
-saveRDS(result_innormal, "result_innormal_1-30&71-100.RData") # 存数据
+saveRDS(result_groupbymonth, "result_groupbymonth_1-30&71-100.RData") # 
+saveRDS(result_innormal, "result_innormal_1-30&71-100.RData") # 
 #40
 
 
@@ -1442,7 +1442,7 @@ saveRDS(result_innormal, "result_innormal_1-30&71-100.RData") # 存数据
 # result_groupbymonth <- rbind(df2, df3)
 # result_innormal <- rbind(df22, df33)
 
-# 运行结果
+# result
 saveRDS(result_groupbymonth, "Result_groupbymonth.RData")
 saveRDS(result_innormal, "Result_innormal.RData")
 
@@ -1451,13 +1451,13 @@ write.csv(result_innormal, "Result_innormal.csv")
 
 
 
-library("ggplot2")
-library("plot3D")
-iris = data.frame(table_list[1])
-x <- Date <-iris$
-y <- Time <- iris$Load
-z <- Temperature <- iris$Load
-
-scatter3D(x, y, z)
-scatter3D(x, y, z, colvar = NULL, col = "blue",
-          pch = 19, cex = 0.5)
+# library("ggplot2")
+# library("plot3D")
+# iris = data.frame(table_list[1])
+# x <- Date <-iris$
+# y <- Time <- iris$Load
+# z <- Temperature <- iris$Load
+# 
+# scatter3D(x, y, z)
+# scatter3D(x, y, z, colvar = NULL, col = "blue",
+#           pch = 19, cex = 0.5)
